@@ -10,7 +10,548 @@
 
 body {
     line-height: 1.6;
+    scroll-behavior: sm/* =========================
+   GLOBAL
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    line-height: 1.6;
     scroll-behavior: smooth;
+    background: #f3f4f6;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #111827;
+    padding: 15px 40px;
+    z-index: 1000;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-right: 20px;
+    font-size: 14px;
+}
+
+nav a:hover,
+nav a.active {
+    text-decoration: underline;
+}
+
+/* =========================
+   SECTION GENERAL (INDEX)
+========================= */
+section {
+    min-height: 100vh;
+    padding: 100px 40px 60px;
+}
+
+h1, h2, h3 {
+    margin-bottom: 15px;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+#hero {
+    background: url("https://via.placeholder.com/1600x900?text=Gym+Fitness")
+        center/cover no-repeat;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    background: rgba(0,0,0,0.6);
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+}
+
+.hero-content span {
+    color: #f97316;
+}
+
+/* =========================
+   QUICK START
+========================= */
+#quick-start {
+    background: #f3f4f6;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.stat-box {
+    background: #ffffff;
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.stat-box h3 {
+    font-size: 32px;
+    color: #f97316;
+}
+
+/* =========================
+   ABOUT
+========================= */
+.section-about {
+    padding: 60px 20px;
+    background: #fff;
+    text-align: center;
+}
+
+.section-about h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.section-about p {
+    margin-bottom: 30px;
+    color: #4b5563;
+    line-height: 1.6;
+}
+
+/* Company Story & Vision-Mission */
+.company-story, .vision-mission {
+    margin-bottom: 40px;
+}
+
+.company-story h3, .vision-mission h3 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+/* Our Team */
+.our-team h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.team-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.team-card {
+    background: #f3f4f6;
+    padding: 20px;
+    border-radius: 12px;
+    width: 220px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.team-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.team-card img {
+    width: 100%;
+    border-radius: 50%;
+    margin-bottom: 12px;
+}
+
+.team-card h4 {
+    margin-bottom: 5px;
+    color: #111827;
+}
+
+.team-card p {
+    color: #4b5563;
+    font-size: 14px;
+}
+
+/* Our Values */
+.our-values h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.our-values ul {
+    list-style-type: none;
+    padding: 0;
+    color: #4b5563;
+    text-align: left;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.our-values ul li {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+
+
+/* =========================
+   PROGRAMS
+========================= */
+.section-programs {
+    padding: 60px 20px;
+    background: #f3f4f6;
+    text-align: center;
+}
+
+.section-programs h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.section-programs p {
+    margin-bottom: 40px;
+    color: #4b5563;
+}
+
+/* Tabel program */
+.program-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 50px;
+}
+
+.program-table th,
+.program-table td {
+    border: 1px solid #d1d5db;
+    padding: 12px;
+    text-align: left;
+}
+
+.program-table th {
+    background: #1f2937;
+    color: white;
+}
+
+/* Signature Programs */
+.signature-programs h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.signature-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.signature-cards .card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.signature-cards .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.signature-cards .card h4 {
+    margin-bottom: 10px;
+    color: #111827;
+}
+
+.signature-cards .card p {
+    color: #4b5563;
+    font-size: 14px;
+}
+
+
+/* =========================
+   LOCATION
+========================= */
+#location {
+    background: #f3f4f6;
+}
+
+.branches {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.branch {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+iframe {
+    width: 100%;
+    height: 300px;
+    border: none;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+/* =========================
+   RESERVATION PAGE
+========================= */
+.reservation-container {
+    max-width: 700px;
+    margin: 120px auto 60px;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.reservation-container h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #6b7280;
+}
+
+.reservation-form label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+.reservation-form input,
+.reservation-form select,
+.reservation-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.reservation-form button {
+    width: 100%;
+    padding: 14px;
+    background: #f97316;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.reservation-form button:hover {
+    background: #ea580c;
+}
+
+.note {
+    margin-top: 15px;
+    font-size: 13px;
+    color: #6b7280;
+    text-align: center;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+    background: #111827;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+}
+.btn-reserve {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 14px 28px;
+    background: #f97316;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.btn-reserve:hover {
+    background: #ea580c;
+}
+.btn-reserve {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 14px 28px;
+    background: #f97316;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.btn-reserve:hover {
+    background: #ea580c;
+}
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.checkbox-label input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.checkbox-label a {
+    color: #f97316;
+    text-decoration: none;
+}
+
+.checkbox-label a:hover {
+    text-decoration: underline;
+}
+.btn-hero {
+    display: inline-block;
+    margin-top: 20px;
+    margin-right: 15px;
+    padding: 14px 28px;
+    background: #10b981; /* hijau untuk call-to-action */
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn-hero:hover {
+    background: #059669;
+}
+
+.btn-reserve {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 14px 28px;
+    background: #f97316;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn-reserve:hover {
+    background: #ea580c;
+}
+/* NAVBAR CONTAINER */
+.nav-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px; /* jarak antar tombol */
+    background: #111827;
+    padding: 15px 20px;
+    flex-wrap: wrap; /* responsive */
+}
+
+/* NAV ITEMS */
+.nav-item {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #1f2937; /* warna kotak */
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.nav-item:hover {
+    background: #f97316; /* warna saat hover */
+    transform: translateY(-2px);
+}
+
+/* Tombol Reservasi */
+.reserve-btn {
+    background: #10b981;
+}
+
+.reserve-btn:hover {
+    background: #059669;
+}
+.nav-box {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #111827;
+    padding: 15px 20px;
+    flex-wrap: wrap;
+}
+
+/* Brand SmartFit Hub */
+.nav-brand {
+    display: inline-block;
+    background: #f97316; /* warna kotak brand */
+    color: white;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.nav-brand:hover {
+    background: #ea580c;
+    transform: translateY(-2px);
+}
+
+/* Menu Kotak */
+.nav-item {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #1f2937;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.nav-item:hover {
+    background: #f97316;
+    transform: translateY(-2px);
+}
+
+/* Tombol Reservasi */
+.reserve-btn {
+    background: #10b981;
+}
+
+.reserve-btn:hover {
+    background: #059669;
+}
+ooth;
     background: #f3f4f6;
 }
 
