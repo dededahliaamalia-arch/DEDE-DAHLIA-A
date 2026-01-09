@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservasi Kelas / Trial Membership</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="reservation.css">
+</head>
+<body>
+
+<header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="index.html#programs">Programs</a>
+        <a href="reservation.html" class="active">Reservasi</a>
+    </nav>
+</header>
+
+<main class="reservation-container">
+    <h1>Reservasi Kelas / Trial</h1>
+    <p class="subtitle">
+        Silakan isi form di bawah untuk reservasi kelas atau trial membership
+    </p>
+
+    <form action="#" method="post" class="reservation-form">
+
+        <label>Nama Lengkap</label>
+        <input type="text" name="name" placeholder="Nama lengkap" required>
+
+        <label>Email</label>
+        <input type="email" name="email" placeholder="email@email.com" required>
+
+        <label>No. WhatsApp</label>
+        <input type="tel" name="phone" placeholder="08xxxxxxxxxx" required>
+
+        <label>No. Handphone</label>
+        <input type="tel" name="phone" placeholder="08xxxxxxxxxx" required>
+
+        <label>Jenis Reservasi</label>
+        <select name="type" required>
+            <option value="">-- Pilih --</option>
+            <option value="trial">Trial Membership</option>
+            <option value="class">Reservasi Kelas</option>
+        </select>
+
+        <label>Pilih Program / Kelas</label>
+        <select name="program">
+            <option value="">-- Pilih Program --</option>
+            <option value="weight-training">Weight Training</option>
+            <option value="cardio">Cardio Class</option>
+            <option value="bootcamp">Fat Loss Bootcamp</option>
+            <option value="personal-training">Personal Training</option>
+        </select>
+
+        <label>Tanggal</label>
+        <input type="date" name="date" required>
+
+        <label>Waktu</label>
+        <input type="time" name="time" required>
+
+        <label>Catatan Tambahan</label>
+        <textarea name="message" rows="4"
+            placeholder="Tujuan latihan / preferensi trainer"></textarea>
+
+        <button type="submit">Kirim Reservasi</button>
+
+        <p class="note">
+            Tim kami akan menghubungi Anda melalui WhatsApp untuk konfirmasi.
+        </p>
+    </form>
+</main>
+
+<form class="reservation-form" action="#" method="post">
+    <input type="text" name="name" placeholder="Nama Lengkap" required>
+    <input type="email" name="email" placeholder="Email" required>
+    <input type="tel" name="phone" placeholder="No. WhatsApp" required>
+
+    <select name="type" required>
+        <option value="">-- Pilih Jenis Reservasi --</option>
+        <option value="trial">Trial Membership</option>
+        <option value="class">Reservasi Kelas</option>
+    </select>
+
+    <select name="program">
+        <option value="">-- Pilih Program / Kelas --</option>
+        <option value="weight-training">Weight Training</option>
+        <option value="cardio">Cardio Class</option>
+        <option value="bootcamp">Fat Loss Bootcamp</option>
+        <option value="personal-training">Personal Training</option>
+    </select>
+
+    <input type="date" name="date" required>
+    <input type="time" name="time" required>
+
+    <textarea name="message" rows="4" placeholder="Catatan tambahan"></textarea>
+
+    <!-- ✅ Checkbox Konfirmasi -->
+    <label class="checkbox-label">
+        <input type="checkbox" name="confirm" required>
+        Saya menyetujui <a href="#">syarat dan ketentuan</a>
+    </label>
+
+    <button type="submit">Kirim Reservasi</button>
+
+    <p class="note">
+        Tim kami akan menghubungi Anda melalui WhatsApp untuk konfirmasi.
+    </p>
+</form>
+
+
+<footer>
+    <p>&copy; 2026 Gym & Fitness Center</p>
+</footer>
+
+</body>
+</html>
